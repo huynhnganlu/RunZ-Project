@@ -19,4 +19,17 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(2f);
         ObjectPoolingManager.Instance.ReturnObjectToPool(gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Health enemyHealth = collision.GetComponent<Health>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(bulletDamage);
+            }
+            ObjectPoolingManager.Instance.ReturnObjectToPool(gameObject);
+        }
+    }
 }

@@ -51,8 +51,8 @@ public class ObjectPoolingManager : MonoBehaviour
     //Return Object to Pool
     public void ReturnObjectToPool(GameObject gameObject)
     {
-        poolDictionary[gameObject.name].Enqueue(gameObject);
         gameObject.SetActive(false);
+        poolDictionary[gameObject.name].Enqueue(gameObject);
 
     }
 }
