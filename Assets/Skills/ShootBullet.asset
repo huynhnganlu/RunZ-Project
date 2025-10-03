@@ -15,5 +15,5 @@ MonoBehaviour:
   skillName: Shoot Bullet
   cooldown: 2
   bulletPrefab: {fileID: 6648526555115866925, guid: 82090ad4ab0c2564ba8eee40c06ac078, type: 3}
-  bulletDamage: 5
+  bulletDamage: 50
   bulletSpeed: 5
