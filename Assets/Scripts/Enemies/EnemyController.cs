@@ -80,11 +80,9 @@ public class EnemyController : MonoBehaviour
         int walkable = 1 << NavMesh.GetAreaFromName("Walkable");
         if (NavMesh.SamplePosition(spawnPos, out hit, 0.1f, walkable))
         {
-            Debug.Log("valid: " + hit.position);
             return true;
         }
 
-        Debug.Log("invalid: " + spawnPos);
         return false;
     }
 

@@ -10,6 +10,8 @@ public class CharacterMovement : MonoBehaviour
     private InputSystem_Actions inputActions;
     private Rigidbody2D rb;
     private Vector2 moveDir;
+    [SerializeField]
+    private Collider2D playerBoundary;
 
     private void Awake()
     {
@@ -34,4 +36,5 @@ public class CharacterMovement : MonoBehaviour
     }
 
    
+
 }
